@@ -1,0 +1,36 @@
+.floatingCTA {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c9a961 0%, #d4b876 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a3a52;
+  text-decoration: none;
+  box-shadow: 0 8px 32px rgba(201, 169, 97, 0.4);
+  z-index: 40;
+  transition: all 0.3s ease;
+}
+
+.floatingCTA:hover {
+  box-shadow: 0 12px 48px rgba(201, 169, 97, 0.6);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .floatingCTA {
+    bottom: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}

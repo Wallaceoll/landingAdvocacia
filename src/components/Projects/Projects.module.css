@@ -1,0 +1,132 @@
+.projects {
+  position: relative;
+  padding: 3rem 1rem;
+  background: white;
+}
+
+@media (min-width: 640px) {
+  .projects {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects {
+    padding: 5rem 2rem;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #c9a961;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a3a52;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+.description {
+  font-size: 1rem;
+  color: #4d6a7f;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 0.75rem;
+  background: #f5f1ed;
+  border: 2px solid rgba(201, 169, 97, 0.2);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #c9a961;
+  background: white;
+  box-shadow: 0 12px 36px rgba(201, 169, 97, 0.2);
+}
+
+.cardTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a3a52;
+  margin-bottom: 0.75rem;
+}
+
+.cardDesc {
+  font-size: 0.95rem;
+  color: #4d6a7f;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 2px solid rgba(201, 169, 97, 0.2);
+}
+
+.resultLabel {
+  font-size: 0.875rem;
+  color: #c9a961;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.resultValue {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a3a52;
+}
