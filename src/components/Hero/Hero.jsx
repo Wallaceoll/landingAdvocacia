@@ -42,13 +42,6 @@ export default function Hero() {
                 <div className={styles.photoOverlay}></div>
               </AssetImage>
             </div>
-            <div className={styles.floatingCard}>
-              <div className={styles.floatingGrid}>
-                <div><strong>1</strong><span>Diagnostico do caso</span></div>
-                <div><strong>2</strong><span>Tese e estrategia</span></div>
-                <div><strong>3</strong><span>Conducao proxima</span></div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>
