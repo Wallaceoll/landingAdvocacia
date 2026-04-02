@@ -38,12 +38,11 @@ export default function Hero() {
 
           <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.85, delay: 0.12 }} className={styles.visual}>
             <div className={styles.photoCard}>
-              <AssetImage src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=1200&q=80" alt="Equipe juridica em reuniao estrategica" className={styles.photoFrame} priority>
+              <AssetImage src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80" alt="Mesa de reuniao com documentos juridicos e advogados em discussao" className={styles.photoFrame} priority>
                 <div className={styles.photoOverlay}></div>
               </AssetImage>
             </div>
             <div className={styles.floatingCard}>
-              <p className={styles.floatingLabel}>Fluxo de atendimento</p>
               <div className={styles.floatingGrid}>
                 <div><strong>1</strong><span>Diagnostico do caso</span></div>
                 <div><strong>2</strong><span>Tese e estrategia</span></div>

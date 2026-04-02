@@ -31,8 +31,8 @@ export default function Header() {
               </svg>
             </div>
             <div className={styles.logoText}>
-              <h1 className={styles.logoTitle}>Barros & Ferraz</h1>
-              <p className={styles.logoSubtitle}>Advocacia estrategica</p>
+              <h1 className={styles.logoTitle}>Advocacia Premium</h1>
+              <p className={styles.logoSubtitle}>Estrategia juridica</p>
             </div>
           </a>
 
