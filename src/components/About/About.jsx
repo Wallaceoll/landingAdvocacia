@@ -1,95 +1,74 @@
-import { motion } from 'framer-motion';
+﻿import { motion } from 'framer-motion';
 import Carousel from './Carousel';
+import AssetImage from '@/components/common/AssetImage';
 import styles from './About.module.css';
+
+const teamMembers = [
+  { src: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80', alt: 'Advogada em escritorio moderno', name: 'Dra. Helena Barros', role: 'Contencioso civel e contratos', note: 'Conduz disputas patrimoniais com argumentacao precisa e comunicacao objetiva.' },
+  { src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=80', alt: 'Advogado em retrato corporativo', name: 'Dr. Caio Ferraz', role: 'Empresarial e societario', note: 'Atua em operacoes sensiveis com foco em risco, governanca e negociacao.' },
+  { src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80', alt: 'Advogada analisando documentos', name: 'Dra. Marina Leal', role: 'Trabalhista e consultivo', note: 'Traduz temas complexos em orientacoes claras para empresas e executivos.' }
+];
+
+const values = [
+  { title: 'Leitura estrategica', text: 'Cada demanda e tratada com contexto, prioridade e avaliacao realista de risco.' },
+  { title: 'Comunicacao clara', text: 'O cliente entende o que esta acontecendo, por que cada passo importa e quais caminhos existem.' },
+  { title: 'Atuacao sofisticada', text: 'Nossa forma de trabalhar combina rigor tecnico, discricao e boa condução relacional.' },
+  { title: 'Proximidade operacional', text: 'Nao entregamos apenas uma tese; acompanhamos a execucao e os desdobramentos.' }
+];
 
 export default function About() {
   const handleTeamClick = () => {
-    const teamSection = document.getElementById('team-carousel');
-    if (teamSection) {
-      teamSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    document.getElementById('team-carousel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
-
-  const carouselImages = [
-    { src: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031337946/L9xfrHKTNcD2XFySZuX8mm/team-advocacia-mCET8Ecto4aFuexHx5uQG7.webp', alt: 'Equipe de advogados profissionais' },
-    { src: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031337946/L9xfrHKTNcD2XFySZuX8mm/team-advocacia-2-nSM3s5Fdt39zN6UdTWEuCe.webp', alt: 'Equipe diversa de especialistas jurídicos' }
-  ];
-  const officeImage = 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031337946/L9xfrHKTNcD2XFySZuX8mm/office-advocacia-DyGhrBj8kKFRfELSf3ZEWS.webp';
-  const valuesImage = 'https://d2xsxph8kpxj0f.cloudfront.net/310419663031337946/L9xfrHKTNcD2XFySZuX8mm/values-advocacia-eHkCKCgKfST6JRf54qdFp5.webp';
 
   return (
     <section id="about" className={styles.about}>
       <div className={styles.container}>
-        {/* Seção Principal - Texto + Equipe */}
         <div className={styles.content}>
-          <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className={styles.textContent}>
-            <p className={styles.badge}>✨ Sobre Nós</p>
-            <h2 className={styles.title}>Excelência e Dedicação</h2>
-            <p className={styles.description}>Nosso escritório foi fundado com a missão de oferecer consultoria jurídica de excelência, combinando experiência profunda com inovação nas práticas legais.</p>
-            <p className={styles.description}>Acreditamos que a justiça é um direito fundamental e nos dedicamos a defender os interesses de nossos clientes com ética, profissionalismo e excelência.</p>
-            <motion.button onClick={handleTeamClick} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className={styles.cta}>Conheça Nossa Equipe</motion.button>
+          <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true, amount: 0.25 }} className={styles.textContent}>
+            <span className={styles.badge}>Equipe e experiencia</span>
+            <h2 className={styles.title}>Advogados que pensam estrategicamente, escrevem com precisao e acompanham o caso de perto.</h2>
+            <p className={styles.description}>Nosso escritorio foi desenhado para atender clientes que precisam de profundidade tecnica sem abrir mao de agilidade e boa comunicacao. A equipe atua de forma coordenada para conectar tese, contexto de negocio e conducao pratica.</p>
+            <p className={styles.description}>O resultado e uma experiencia menos burocratica, mais clara e mais preparada para lidar com disputas, negociacoes e decisoes juridicas relevantes.</p>
+            <button onClick={handleTeamClick} className={styles.cta}>Conhecer equipe</button>
           </motion.div>
-          <motion.div id="team-carousel" initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className={styles.imageContent}>
-            <Carousel images={carouselImages} />
+
+          <motion.div id="team-carousel" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.75, delay: 0.08 }} viewport={{ once: true, amount: 0.2 }} className={styles.imageContent}>
+            <Carousel images={teamMembers} />
           </motion.div>
         </div>
 
-        {/* Seção Secundária - Escritório */}
         <div className={styles.secondaryContent}>
-          <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }} viewport={{ once: true }} className={styles.imageContentSecondary}>
-            <img src={officeImage} alt="Escritório moderno com vista da cidade" className={styles.image} />
+          <motion.div initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true, amount: 0.2 }} className={styles.imageContentSecondary}>
+            <AssetImage src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80" alt="Sala de reuniao em escritorio de advocacia" className={styles.secondaryImageFrame} imgClassName={styles.image} />
           </motion.div>
-          <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }} viewport={{ once: true }} className={styles.textContentSecondary}>
-            <h3 className={styles.subtitle}>Infraestrutura de Classe Mundial</h3>
-            <p className={styles.description}>Nosso escritório conta com infraestrutura moderna, salas de conferência equipadas com tecnologia de ponta e um ambiente que reflete nosso compromisso com a excelência.</p>
+
+          <motion.div initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.08 }} viewport={{ once: true, amount: 0.2 }} className={styles.textContentSecondary}>
+            <h3 className={styles.subtitle}>Estrutura preparada para casos que exigem leitura fina e execucao consistente</h3>
+            <p className={styles.description}>Trabalhamos com fluxo enxuto, organizacao documental e acompanhamento proximo para que o cliente tenha clareza sobre prazos, risco e estrategia. O ambiente e a rotina do escritorio refletem essa combinacao de discricao, metodo e velocidade.</p>
             <ul className={styles.features}>
-              <li>Escritórios em localização estratégica</li>
-              <li>Salas de conferência de última geração</li>
-              <li>Equipe multidisciplinar especializada</li>
-              <li>Atendimento personalizado 24/7</li>
+              <li>Atendimento consultivo e contencioso integrado</li>
+              <li>Reunioes objetivas com foco em decisao</li>
+              <li>Estruturacao documental com rigor tecnico</li>
+              <li>Relacao proxima com empresas, executivos e familias</li>
             </ul>
           </motion.div>
         </div>
 
-        {/* Seção Valores */}
-        <div className={styles.valuesSection}>
-          <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} viewport={{ once: true }} className={styles.valuesContent}>
-            <img src={valuesImage} alt="Valores: Justiça, Proteção e Parceria" className={styles.valuesImage} />
-            <div className={styles.valuesText}>
-              <h3 className={styles.subtitle}>Nossos Valores Fundamentais</h3>
-              <div className={styles.valuesList}>
-                <div className={styles.valueItem}>
-                  <span className={styles.valueIcon}>⚖️</span>
-                  <div>
-                    <h4>Justiça</h4>
-                    <p>Comprometidos com a justiça e o estado de direito</p>
-                  </div>
-                </div>
-                <div className={styles.valueItem}>
-                  <span className={styles.valueIcon}>🛡️</span>
-                  <div>
-                    <h4>Proteção</h4>
-                    <p>Defendemos os direitos e interesses de nossos clientes</p>
-                  </div>
-                </div>
-                <div className={styles.valueItem}>
-                  <span className={styles.valueIcon}>🤝</span>
-                  <div>
-                    <h4>Parceria</h4>
-                    <p>Trabalhamos em conjunto para alcançar os melhores resultados</p>
-                  </div>
-                </div>
-                <div className={styles.valueItem}>
-                  <span className={styles.valueIcon}>💡</span>
-                  <div>
-                    <h4>Inovação</h4>
-                    <p>Aplicamos soluções criativas e atualizadas para cada desafio jurídico</p>
-                  </div>
-                </div>
+        <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.75 }} viewport={{ once: true, amount: 0.15 }} className={styles.valuesSection}>
+          <div className={styles.valuesHeader}>
+            <span className={styles.badge}>Nossa forma de atuar</span>
+            <h3 className={styles.subtitle}>Solidez juridica com uma experiencia menos padrao e muito mais inteligente.</h3>
+          </div>
+          <div className={styles.valuesList}>
+            {values.map((value) => (
+              <div key={value.title} className={styles.valueItem}>
+                <h4>{value.title}</h4>
+                <p>{value.text}</p>
               </div>
-            </div>
-          </motion.div>
-        </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

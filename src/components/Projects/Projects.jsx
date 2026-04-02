@@ -1,32 +1,31 @@
-import { motion } from 'framer-motion';
+﻿import { motion } from 'framer-motion';
 import styles from './Projects.module.css';
 
-export default function Projects() {
-  const projects = [
-    { title: 'Recuperação de Direitos Trabalhistas', result: 'R$ 2M+ recuperados', desc: 'Recuperamos direitos de 50+ funcionários em ação coletiva trabalhista.' },
-    { title: 'Fusão e Aquisição Corporativa', result: '100% conformidade', desc: 'Assessoria jurídica completa em processo de M&A de empresa de tecnologia.' },
-    { title: 'Defesa em Processo Criminal', result: 'Absolvição', desc: 'Defesa bem-sucedida em processo criminal complexo.' },
-    { title: 'Resolução de Disputa Comercial', result: 'Acordo favorável', desc: 'Mediação entre empresas multinacionais evitando litígio custoso.' },
-    { title: 'Consultoria em Compliance', result: 'Certificação obtida', desc: 'Implementação de programa completo de compliance regulatório.' },
-    { title: 'Proteção de Propriedade Intelectual', result: '15+ jurisdições', desc: 'Registro e proteção de marcas e patentes para startup de tecnologia.' }
-  ];
+const projects = [
+  { title: 'Disputa societaria sensivel', result: 'Acordo estruturado', desc: 'Conducao estrategica para reduzir desgaste entre socios e preservar continuidade operacional.' },
+  { title: 'Reestruturacao contratual', result: 'Risco reduzido', desc: 'Revisao de instrumentos-chave para dar mais previsibilidade a uma operacao em expansao.' },
+  { title: 'Defesa trabalhista coordenada', result: 'Passivo controlado', desc: 'Atuacao combinando linha tecnica, negociacao e reorganizacao documental.' },
+  { title: 'Resposta em processo administrativo', result: 'Defesa robusta', desc: 'Estruturacao de argumentos e documentos para proteger reputacao e operacao.' },
+  { title: 'Consultoria para decisao patrimonial', result: 'Cenario juridico claro', desc: 'Leitura preventiva para apoiar uma decisao importante com menos improviso.' },
+  { title: 'Crise contratual empresarial', result: 'Saida viavel', desc: 'Negociacao com foco em continuidade de relacao e menor impacto financeiro.' }
+];
 
+export default function Projects() {
   return (
     <section id="projects" className={styles.projects}>
       <div className={styles.container}>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className={styles.header}>
-          <p className={styles.badge}>✨ Nossos Projetos</p>
-          <h2 className={styles.title}>Casos de Sucesso</h2>
-          <p className={styles.description}>Conheça alguns dos nossos casos de sucesso e como ajudamos nossos clientes.</p>
+          <p className={styles.badge}>Resultados reais</p>
+          <h2 className={styles.title}>Casos conduzidos com criterio tecnico, leitura politica e timing correto.</h2>
+          <p className={styles.description}>Cada demanda tem sua particularidade, mas todas exigem a mesma combinacao: estratega, metodo e execucao consistente.</p>
         </motion.div>
 
         <div className={styles.grid}>
           {projects.map((project, index) => (
-            <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className={styles.card}>
+            <motion.div key={project.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: index * 0.07 }} viewport={{ once: true }} className={styles.card}>
               <h3 className={styles.cardTitle}>{project.title}</h3>
               <p className={styles.cardDesc}>{project.desc}</p>
               <div className={styles.result}>
-                <span className={styles.resultLabel}>Resultado</span>
                 <span className={styles.resultValue}>{project.result}</span>
               </div>
             </motion.div>

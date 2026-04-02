@@ -1,18 +1,5 @@
-.about {
-  padding: 3rem 1rem;
-  background: #f5f1ed;
-}
-
-@media (min-width: 640px) {
-  .about {
-    padding: 4rem 1.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .about {
-    padding: 5rem 2rem;
-  }
+﻿.about {
+  padding: 4.5rem 1rem;
 }
 
 .container {
@@ -21,259 +8,158 @@
   margin: 0 auto;
 }
 
-/* Seção Principal */
-.content {
+.content,
+.secondaryContent {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 2rem;
   align-items: center;
-  margin-bottom: 4rem;
 }
 
-@media (min-width: 1024px) {
-  .content {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-  }
-}
-
-.textContent {
-  order: 1;
-}
-
-@media (min-width: 1024px) {
-  .textContent {
-    order: 1;
-  }
+.content {
+  margin-bottom: 2rem;
 }
 
 .badge {
-  display: inline-block;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #c9a961;
+  display: inline-flex;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  color: var(--accent-strong);
+  font-size: 0.74rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 1rem;
+  letter-spacing: 0.12em;
+}
+
+.title,
+.subtitle {
+  margin-top: 1rem;
+  font-family: 'Fraunces', serif;
+  color: var(--text);
 }
 
 .title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1a3a52;
-  margin-bottom: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .title {
-    font-size: 3rem;
-  }
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.06;
 }
 
 .subtitle {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1a3a52;
-  margin-bottom: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .subtitle {
-    font-size: 2.5rem;
-  }
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.12;
 }
 
 .description {
-  font-size: 1rem;
-  color: #4d6a7f;
+  margin-top: 1rem;
+  color: var(--muted);
   line-height: 1.8;
-  margin-bottom: 1.5rem;
 }
 
 .cta {
-  display: inline-block;
-  padding: 0.875rem 2rem;
-  border-radius: 0.5rem;
-  background: linear-gradient(135deg, #c9a961 0%, #d4b876 100%);
-  color: #1a3a52;
-  font-weight: 600;
+  margin-top: 1.5rem;
   border: none;
+  border-radius: 1rem;
+  padding: 0.95rem 1.2rem;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--highlight) 100%);
+  color: #08363b;
+  font-weight: 800;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 24px rgba(201, 169, 97, 0.3);
+  box-shadow: 0 16px 30px rgba(31, 182, 178, 0.2);
 }
 
-.cta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 36px rgba(201, 169, 97, 0.4);
+.imageContent,
+.secondaryContent,
+.valuesSection {
+  border-radius: 1.8rem;
 }
 
-.imageContent {
-  order: 2;
+.secondaryContent,
+.valuesSection {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
 }
 
-@media (min-width: 1024px) {
-  .imageContent {
-    order: 2;
-  }
+.secondaryImageFrame {
+  aspect-ratio: 4 / 3;
+  border-radius: 1.35rem;
 }
 
 .image {
   width: 100%;
-  height: auto;
-  border-radius: 0.75rem;
-  box-shadow: 0 20px 40px rgba(26, 58, 82, 0.15);
-  display: block;
-}
-
-/* Seção Secundária - Escritório */
-.secondaryContent {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  align-items: center;
-  margin-bottom: 4rem;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 1rem;
-  border: 1px solid rgba(201, 169, 97, 0.2);
-}
-
-@media (min-width: 1024px) {
-  .secondaryContent {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    padding: 3rem;
-  }
-}
-
-.imageContentSecondary {
-  order: 2;
-}
-
-@media (min-width: 1024px) {
-  .imageContentSecondary {
-    order: 1;
-  }
-}
-
-.textContentSecondary {
-  order: 1;
-}
-
-@media (min-width: 1024px) {
-  .textContentSecondary {
-    order: 2;
-  }
+  height: 100%;
+  object-fit: cover;
 }
 
 .features {
   list-style: none;
-  padding: 0;
-  margin: 1.5rem 0 0 0;
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1.25rem;
 }
 
 .features li {
-  padding: 0.75rem 0;
-  padding-left: 1.5rem;
-  color: #4d6a7f;
   position: relative;
-  font-size: 0.95rem;
+  padding-left: 1.4rem;
+  color: var(--text);
+  font-weight: 600;
 }
 
-.features li:before {
-  content: '✓';
+.features li::before {
+  content: '';
   position: absolute;
   left: 0;
-  color: #c9a961;
-  font-weight: bold;
+  top: 0.55rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: var(--accent);
 }
 
-/* Seção Valores */
-.valuesSection {
-  padding: 2rem;
-  background: linear-gradient(135deg, rgba(26, 58, 82, 0.05) 0%, rgba(201, 169, 97, 0.05) 100%);
-  border-radius: 1rem;
-  border: 1px solid rgba(201, 169, 97, 0.2);
-}
-
-@media (min-width: 1024px) {
-  .valuesSection {
-    padding: 3rem;
-  }
-}
-
-.valuesContent {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  align-items: center;
-}
-
-@media (min-width: 1024px) {
-  .valuesContent {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-  }
-}
-
-.valuesImage {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  margin: 0 auto;
-}
-
-.valuesText {
-  padding: 0;
+.valuesHeader {
+  max-width: 700px;
 }
 
 .valuesList {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 1rem;
   margin-top: 1.5rem;
 }
 
-@media (min-width: 640px) {
-  .valuesList {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 1024px) {
-  .valuesList {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 .valueItem {
-  display: flex;
-  gap: 1rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 0.5rem;
-  border-left: 3px solid #c9a961;
-}
-
-.valueIcon {
-  font-size: 1.5rem;
-  flex-shrink: 0;
+  padding: 1.15rem;
+  border-radius: 1.2rem;
+  background: linear-gradient(135deg, rgba(247, 251, 252, 0.92) 0%, rgba(255, 255, 255, 0.96) 100%);
+  border: 1px solid var(--line);
 }
 
 .valueItem h4 {
-  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  color: var(--text);
   font-size: 1rem;
-  font-weight: 600;
-  color: #1a3a52;
-  margin: 0 0 0.25rem 0;
 }
 
 .valueItem p {
-  font-size: 0.875rem;
-  color: #4d6a7f;
-  margin: 0;
-  line-height: 1.5;
+  margin-top: 0.45rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (min-width: 960px) {
+  .content,
+  .secondaryContent {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+  }
+
+  .valuesList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .secondaryContent,
+  .valuesSection {
+    padding: 2rem;
+  }
 }

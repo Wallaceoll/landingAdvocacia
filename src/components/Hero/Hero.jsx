@@ -1,37 +1,57 @@
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+﻿import { motion } from 'framer-motion';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import AssetImage from '@/components/common/AssetImage';
 import styles from './Hero.module.css';
 
+const highlights = [
+  'Atendimento estrategico e comunicacao objetiva',
+  'Analise cuidadosa de riscos, prazos e caminhos possiveis',
+  'Equipe integrada para contencioso, consultivo e negociacao'
+];
+
 export default function Hero() {
-  const handleContactClick = () => {
-    const element = document.querySelector('#contact');
+  const handleServicesClick = () => {
+    const element = document.querySelector('#services');
     if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <section id="hero" className={styles.hero}>
       <div className={styles.container}>
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className={styles.content}>
-          <motion.p animate={{ opacity: [0.6, 1, 0.6] }} transition={{ duration: 3, repeat: Infinity }} className={styles.badge}>✨ EXCELÊNCIA EM ADVOCACIA</motion.p>
-          <h1 className={styles.title}>Sua Defesa é Nossa Missão</h1>
-          <p className={styles.description}>Mais de 10 anos de experiência em direito civil, comercial e trabalhista. Representamos nossos clientes com dedicação, ética e excelência profissional.</p>
-          <div className={styles.stats}>
-            {[{ num: '+500', label: 'Causas Ganhas' }, { num: '+10', label: 'Anos' }, { num: '100%', label: 'Satisfação' }].map((stat, i) => (
-              <motion.div key={i} whileHover={{ scale: 1.05 }} className={styles.stat}>
-                <span className={styles.statNumber}>{stat.num}</span>
-                <span className={styles.statLabel}>{stat.label}</span>
-              </motion.div>
-            ))}
-          </div>
-          <div className={styles.buttons}>
-            <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={handleContactClick} className={styles.primaryButton}>
-              Agendar Consulta <ArrowRight size={20} />
+        <div className={styles.layout}>
+          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className={styles.content}>
+            <span className={styles.eyebrow}>Escritorio de advocacia boutique em Sao Paulo</span>
+            <h1 className={styles.title}>Estrategia juridica solida para proteger patrimonio, operacoes e decisoes importantes.</h1>
+            <p className={styles.description}>Atuamos com leitura precisa de contexto, argumentacao consistente e acompanhamento proximo para transformar demandas complexas em planos juridicos claros, elegantes e executaveis.</p>
+            <div className={styles.list}>
+              {highlights.map((item) => (
+                <motion.div key={item} initial={{ opacity: 0, x: -16 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.45 }} className={styles.listItem}>
+                  <CheckCircle2 size={18} />
+                  <span>{item}</span>
+                </motion.div>
+              ))}
+            </div>
+            <motion.button whileHover={{ scale: 1.02, y: -2 }} whileTap={{ scale: 0.98 }} onClick={handleServicesClick} className={styles.primaryButton}>
+              Conhecer Servicos <ArrowRight size={18} />
             </motion.button>
-            <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' })} className={styles.secondaryButton}>
-              Conhecer Serviços
-            </motion.button>
-          </div>
-        </motion.div>
+          </motion.div>
+
+          <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.85, delay: 0.12 }} className={styles.visual}>
+            <div className={styles.photoCard}>
+              <AssetImage src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=1200&q=80" alt="Equipe juridica em reuniao estrategica" className={styles.photoFrame} priority>
+                <div className={styles.photoOverlay}></div>
+              </AssetImage>
+            </div>
+            <div className={styles.floatingCard}>
+              <p className={styles.floatingLabel}>Fluxo de atendimento</p>
+              <div className={styles.floatingGrid}>
+                <div><strong>1</strong><span>Diagnostico do caso</span></div>
+                <div><strong>2</strong><span>Tese e estrategia</span></div>
+                <div><strong>3</strong><span>Conducao proxima</span></div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

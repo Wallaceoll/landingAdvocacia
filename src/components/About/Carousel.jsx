@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+﻿import { useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import AssetImage from '@/components/common/AssetImage';
 import styles from './Carousel.module.css';
 
 export default function Carousel({ images }) {
@@ -8,10 +9,10 @@ export default function Carousel({ images }) {
   const [autoPlay, setAutoPlay] = useState(true);
 
   useEffect(() => {
-    if (!autoPlay) return;
+    if (!autoPlay) return undefined;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 5000);
+    }, 4800);
     return () => clearInterval(interval);
   }, [autoPlay, images.length]);
 
@@ -25,34 +26,36 @@ export default function Carousel({ images }) {
     setAutoPlay(false);
   };
 
-  const goToSlide = (index) => {
-    setCurrentIndex(index);
-    setAutoPlay(false);
-  };
-
-  const resumeAutoPlay = () => {
-    setTimeout(() => setAutoPlay(true), 3000);
-  };
+  const activeItem = images[currentIndex];
 
   return (
-    <div className={styles.carousel} onMouseEnter={() => setAutoPlay(false)} onMouseLeave={resumeAutoPlay}>
+    <div className={styles.carousel} onMouseEnter={() => setAutoPlay(false)} onMouseLeave={() => setAutoPlay(true)}>
       <div className={styles.carouselContainer}>
         <AnimatePresence mode="wait">
-          <motion.img key={currentIndex} src={images[currentIndex].src} alt={images[currentIndex].alt} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }} className={styles.image} />
+          <motion.div key={activeItem.src} initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -18 }} transition={{ duration: 0.45 }} className={styles.slide}>
+            <AssetImage src={activeItem.src} alt={activeItem.alt} className={styles.imageFrame} imgClassName={styles.image}>
+              <div className={styles.overlay}></div>
+            </AssetImage>
+            <div className={styles.infoCard}>
+              <p className={styles.role}>{activeItem.role}</p>
+              <h3 className={styles.name}>{activeItem.name}</h3>
+              <p className={styles.note}>{activeItem.note}</p>
+            </div>
+          </motion.div>
         </AnimatePresence>
 
-        <button className={styles.prevButton} onClick={goToPrevious} aria-label="Imagem anterior">
-          <ChevronLeft size={24} />
+        <button className={styles.prevButton} onClick={goToPrevious} aria-label="Anterior">
+          <ChevronLeft size={20} />
         </button>
 
-        <button className={styles.nextButton} onClick={goToNext} aria-label="Próxima imagem">
-          <ChevronRight size={24} />
+        <button className={styles.nextButton} onClick={goToNext} aria-label="Proxima">
+          <ChevronRight size={20} />
         </button>
       </div>
 
       <div className={styles.dots}>
-        {images.map((_, index) => (
-          <motion.button key={index} className={`${styles.dot} ${index === currentIndex ? styles.active : ''}`} onClick={() => goToSlide(index)} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} aria-label={`Ir para imagem ${index + 1}`} />
+        {images.map((image, index) => (
+          <button key={image.name} className={`${styles.dot} ${index === currentIndex ? styles.active : ''}`} onClick={() => { setCurrentIndex(index); setAutoPlay(false); }} aria-label={`Ir para ${image.name}`} />
         ))}
       </div>
     </div>
