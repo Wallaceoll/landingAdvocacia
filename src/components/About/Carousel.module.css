@@ -1,28 +1,69 @@
-.carousel {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+﻿.carousel {
+  display: grid;
+  gap: 1rem;
 }
 
 .carouselContainer {
   position: relative;
   width: 100%;
-  aspect-ratio: 1;
-  border-radius: 0.75rem;
+  min-height: 520px;
+}
+
+.slide {
+  position: relative;
+}
+
+.imageFrame {
+  aspect-ratio: 4 / 5;
+  border-radius: 1.8rem;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(26, 58, 82, 0.15);
-  background: #f5f1ed;
+  box-shadow: var(--shadow);
 }
 
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 38%, rgba(18, 39, 53, 0.46) 100%);
+}
+
+.infoCard {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 1rem;
+  border-radius: 1.2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.46);
+  backdrop-filter: blur(14px);
+}
+
+.role {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+
+.name {
+  margin: 0.35rem 0 0;
+  color: var(--text);
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+}
+
+.note {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  line-height: 1.65;
 }
 
 .prevButton,
@@ -30,26 +71,24 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(201, 169, 97, 0.8);
-  color: white;
+  width: 2.75rem;
+  height: 2.75rem;
   border: none;
-  width: 48px;
-  height: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 10;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(4px);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 10px 24px rgba(19, 45, 60, 0.12);
 }
 
 .prevButton:hover,
 .nextButton:hover {
-  background: rgba(201, 169, 97, 1);
   transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 8px 20px rgba(201, 169, 97, 0.4);
+  box-shadow: 0 14px 28px rgba(19, 45, 60, 0.18);
 }
 
 .prevButton {
@@ -60,7 +99,68 @@
   right: 1rem;
 }
 
+.memberList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.memberButton {
+  text-align: left;
+  padding: 0.95rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.memberButton:hover,
+.memberButtonActive {
+  border-color: rgba(17, 141, 138, 0.35);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 14px 28px rgba(19, 45, 60, 0.08);
+}
+
+.memberName {
+  display: block;
+  color: var(--text);
+  font-weight: 800;
+}
+
+.memberRole {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 999px;
+  border: none;
+  background: rgba(17, 141, 138, 0.18);
+  cursor: pointer;
+}
+
+.dot.active {
+  width: 2rem;
+  background: var(--accent);
+}
+
 @media (max-width: 640px) {
+  .carouselContainer {
+    min-height: 440px;
+  }
+
   .prevButton,
   .nextButton {
     width: 40px;
@@ -74,40 +174,9 @@
   .nextButton {
     right: 0.5rem;
   }
-}
 
-.dots {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 2px solid #c9a961;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0;
-}
-
-.dot:hover {
-  background: rgba(201, 169, 97, 0.3);
-}
-
-.dot.active {
-  background: #c9a961;
-  box-shadow: 0 0 12px rgba(201, 169, 97, 0.5);
-}
-
-@media (max-width: 640px) {
-  .dots {
-    gap: 0.5rem;
-    margin-top: 1rem;
+  .memberList {
+    grid-template-columns: 1fr;
   }
 
   .dot {

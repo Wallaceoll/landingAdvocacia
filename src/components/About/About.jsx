@@ -4,15 +4,15 @@ import AssetImage from '@/components/common/AssetImage';
 import styles from './About.module.css';
 
 const teamMembers = [
-  { src: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80', alt: 'Advogada em escritorio moderno', name: 'Dra. Helena Barros', role: 'Contencioso civel e contratos', note: 'Conduz disputas patrimoniais com argumentacao precisa e comunicacao objetiva.' },
-  { src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=80', alt: 'Advogado em retrato corporativo', name: 'Dr. Caio Ferraz', role: 'Empresarial e societario', note: 'Atua em operacoes sensiveis com foco em risco, governanca e negociacao.' },
-  { src: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80', alt: 'Advogada analisando documentos', name: 'Dra. Marina Leal', role: 'Trabalhista e consultivo', note: 'Traduz temas complexos em orientacoes claras para empresas e executivos.' }
+  { src: 'https://images.unsplash.com/photo-1589994965851-a8f479c573a9?auto=format&fit=crop&w=1200&q=80', alt: 'Advogada em traje social no escritorio', name: 'Dra. Helena Barros', role: 'Contencioso civel e contratos', note: 'Conduz disputas patrimoniais com argumentacao precisa e comunicacao objetiva.' },
+  { src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80', alt: 'Advogado em retrato corporativo com terno', name: 'Dr. Caio Ferraz', role: 'Empresarial e societario', note: 'Atua em operacoes sensiveis com foco em risco, governanca e negociacao.' },
+  { src: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1200&q=80', alt: 'Advogada corporativa com documentos no escritorio', name: 'Dra. Marina Leal', role: 'Trabalhista e consultivo', note: 'Traduz temas complexos em orientacoes claras para empresas e executivos.' }
 ];
 
 const values = [
   { title: 'Leitura estrategica', text: 'Cada demanda e tratada com contexto, prioridade e avaliacao realista de risco.' },
   { title: 'Comunicacao clara', text: 'O cliente entende o que esta acontecendo, por que cada passo importa e quais caminhos existem.' },
-  { title: 'Atuacao sofisticada', text: 'Nossa forma de trabalhar combina rigor tecnico, discricao e boa condução relacional.' },
+  { title: 'Atuacao sofisticada', text: 'Nossa forma de trabalhar combina rigor tecnico, discricao e boa conducao relacional.' },
   { title: 'Proximidade operacional', text: 'Nao entregamos apenas uma tese; acompanhamos a execucao e os desdobramentos.' }
 ];
 

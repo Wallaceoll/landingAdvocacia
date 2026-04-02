@@ -53,6 +53,23 @@ export default function Carousel({ images }) {
         </button>
       </div>
 
+      <div className={styles.memberList}>
+        {images.map((image, index) => (
+          <button
+            key={`${image.name}-card`}
+            className={`${styles.memberButton} ${index === currentIndex ? styles.memberButtonActive : ''}`}
+            onClick={() => {
+              setCurrentIndex(index);
+              setAutoPlay(false);
+            }}
+            aria-label={`Ver perfil de ${image.name}`}
+          >
+            <span className={styles.memberName}>{image.name}</span>
+            <span className={styles.memberRole}>{image.role}</span>
+          </button>
+        ))}
+      </div>
+
       <div className={styles.dots}>
         {images.map((image, index) => (
           <button key={image.name} className={`${styles.dot} ${index === currentIndex ? styles.active : ''}`} onClick={() => { setCurrentIndex(index); setAutoPlay(false); }} aria-label={`Ir para ${image.name}`} />
