@@ -4,7 +4,7 @@ import AssetImage from '@/components/common/AssetImage';
 import styles from './About.module.css';
 
 const teamMembers = [
-  { src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=1200&q=80', alt: 'Advogada em retrato corporativo formal', name: 'Dra. Helena Barros', role: 'Contencioso estrategico e consultoria patrimonial', note: 'Atua em casos sensiveis com leitura tecnica profunda, postura firme e comunicacao segura para clientes e familias empresarias.' },
+  { src: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7-6461ffad8d80?auto=format&fit=crop&w=1200&q=80', alt: 'Advogado em retrato corporativo formal', name: 'Dr. Jose Hernandes', role: 'Direito trabalhista e casos de CLT', note: 'Advogado com foco em causas trabalhistas, atuando em direitos previstos na CLT, rescisao, verbas, jornadas e defesa tecnica de trabalhadores com comunicacao clara e postura firme.' },
   { src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80', alt: 'Advogado em retrato corporativo com terno', name: 'Dr. Caio Ferraz', role: 'Empresarial e societario', note: 'Atua em operacoes sensiveis com foco em risco, governanca e negociacao.' },
   { src: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1200&q=80', alt: 'Advogada corporativa com documentos no escritorio', name: 'Dra. Marina Leal', role: 'Trabalhista e consultivo', note: 'Traduz temas complexos em orientacoes claras para empresas e executivos.' }
 ];
