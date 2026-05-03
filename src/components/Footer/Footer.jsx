@@ -10,7 +10,7 @@ export default function Footer() {
       <div className={styles.container}>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className={styles.content}>
           <div className={styles.section}>
-            <h3 className={styles.sectionTitle}>Areas</h3>
+            <h3 className={styles.sectionTitle}>Áreas</h3>
             <ul className={styles.links}>
               <li><a href="#services">Direito Civil</a></li>
               <li><a href="#services">Empresarial</a></li>
@@ -20,7 +20,7 @@ export default function Footer() {
           </div>
 
           <div className={styles.section}>
-            <h3 className={styles.sectionTitle}>Escritorio</h3>
+            <h3 className={styles.sectionTitle}>Escritório</h3>
             <ul className={styles.links}>
               <li><a href="#about">Equipe</a></li>
               <li><a href="#projects">Resultados</a></li>
@@ -33,25 +33,25 @@ export default function Footer() {
             <h3 className={styles.sectionTitle}>Atendimento</h3>
             <ul className={styles.links}>
               <li><a href="#contact">Solicitar retorno</a></li>
-              <li><a href="#contact">Agendar reuniao</a></li>
+              <li><a href="#contact">Agendar reunião</a></li>
               <li><a href="#contact">Atendimento online</a></li>
-              <li><a href="#contact">Endereco</a></li>
+              <li><a href="#contact">Endereço</a></li>
             </ul>
           </div>
 
           <div className={styles.section}>
             <h3 className={styles.sectionTitle}>Redes</h3>
             <div className={styles.socials}>
-              <a href="#" className={styles.socialLink}><Facebook size={20} /></a>
-              <a href="#" className={styles.socialLink}><Linkedin size={20} /></a>
-              <a href="#" className={styles.socialLink}><Instagram size={20} /></a>
-              <a href="#" className={styles.socialLink}><Twitter size={20} /></a>
+              <a href="#" className={styles.socialLink} aria-label="Facebook"><Facebook size={20} /></a>
+              <a href="#" className={styles.socialLink} aria-label="LinkedIn"><Linkedin size={20} /></a>
+              <a href="#" className={styles.socialLink} aria-label="Instagram"><Instagram size={20} /></a>
+              <a href="#" className={styles.socialLink} aria-label="Twitter"><Twitter size={20} /></a>
             </div>
           </div>
         </motion.div>
 
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.2 }} viewport={{ once: true }} className={styles.bottom}>
-          <p>&copy; {currentYear} Barros & Ferraz Advocacia Estrategica. Todos os direitos reservados.</p>
+          <p>&copy; {currentYear} Barros & Ferraz Advocacia Estratégica. Todos os direitos reservados a.</p>
         </motion.div>
       </div>
     </footer>

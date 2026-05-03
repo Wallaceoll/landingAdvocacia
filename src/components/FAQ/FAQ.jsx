@@ -9,32 +9,32 @@ export default function FAQ() {
   const faqs = [
     {
       q: 'Como funciona a primeira consulta?',
-      a: 'A primeira consulta é realizada presencialmente ou online, onde analisamos seu caso em detalhes, entendemos seus objetivos e apresentamos as melhores estratégias jurídicas adaptadas à sua situação específica.',
+      a: 'A primeira consulta é realizada presencialmente ou online. Nela, analisamos seu caso em detalhes, entendemos seus objetivos e apresentamos as melhores estratégias jurídicas adaptadas à sua situação específica.',
       icon: '📞'
     },
     {
       q: 'Qual é o valor dos honorários?',
-      a: 'Os honorários são definidos conforme a complexidade do caso e forma de contratação: honorários fixos (valor pré-determinado), honorários variáveis (baseado em horas) ou contingência (percentual sobre o resultado).',
+      a: 'Os honorários são definidos conforme a complexidade do caso e a forma de contratação: honorários fixos (valor predeterminado), honorários variáveis (baseados em horas) ou contingência (percentual sobre o resultado).',
       icon: '💰'
     },
     {
       q: 'Quanto tempo leva um processo?',
-      a: 'O tempo varia conforme o tipo de processo jurídico. Processos simples podem levar meses, enquanto processos complexos podem levar anos. Mantemos você informado em todas as etapas do processo.',
+      a: 'O tempo varia conforme o tipo de processo jurídico. Demandas simples podem levar meses, enquanto processos complexos podem levar anos. Mantemos você informado em todas as etapas.',
       icon: '⏱️'
     },
     {
       q: 'Vocês atuam em qual região?',
-      a: 'Atuamos em todo o Brasil através de nossa rede de parceiros estratégicos. Também temos experiência em algumas questões internacionais, especialmente em direito comercial e propriedade intelectual.',
+      a: 'Atuamos em todo o Brasil através de nossa rede de parceiros estratégicos. Também temos experiência em questões internacionais, especialmente em Direito Comercial e Propriedade Intelectual.',
       icon: '🗺️'
     },
     {
       q: 'Qual é a taxa de sucesso?',
-      a: 'Temos uma taxa de sucesso de 98% em nossos casos, com excelentes resultados para nossos clientes. Cada caso é tratado com máxima dedicação e profissionalismo para alcançar o melhor resultado possível.',
+      a: 'Temos um histórico de excelentes resultados para nossos clientes. Cada caso é tratado com máxima dedicação e profissionalismo para alcançar o melhor desfecho possível dentro das normas éticas da OAB.',
       icon: '✅'
     },
     {
       q: 'Como agendar uma consulta?',
-      a: 'Você pode agendar de forma fácil através de três canais: WhatsApp (clique no botão flutuante), telefone (11) 3000-0000, ou preenchendo o formulário de contato em nosso site. Responderemos em até 24 horas.',
+      a: 'Você pode agendar de forma fácil através de três canais: WhatsApp (clique no botão flutuante), telefone (11) 3000-0000 ou preenchendo o formulário de contato em nosso site. Responderemos em até 24 horas.',
       icon: '📅'
     }
   ];
@@ -112,7 +112,7 @@ export default function FAQ() {
         >
           <HelpCircle size={24} className={styles.ctaIcon} />
           <h3 className={styles.ctaTitle}>Não encontrou sua dúvida?</h3>
-          <p className={styles.ctaText}>Entre em contato conosco. Nossa equipe está pronta para responder todas as suas perguntas.</p>
+          <p className={styles.ctaText}>Entre em contato conosco. Nossa equipe está pronta para responder a todas as suas perguntas.</p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

@@ -4,10 +4,10 @@ import styles from './Contact.module.css';
 
 export default function Contact() {
   const contacts = [
-    { icon: Phone, title: 'Telefone', value: '(11) 3000-0000', subtext: 'Seg a Sex, 9h as 18h' },
-    { icon: Mail, title: 'Email', value: 'contato@barroseferraz.com.br', subtext: 'Resposta em horario comercial' },
-    { icon: MapPin, title: 'Endereco', value: 'Av. Paulista, 1000', subtext: 'Sao Paulo - SP' },
-    { icon: Clock, title: 'Disponibilidade', value: 'Atendimento agendado', subtext: 'Reunioes presenciais e online' }
+    { icon: Phone, title: 'Telefone', value: '(11) 3000-0000', subtext: 'Seg a Sex, 9h às 18h' },
+    { icon: Mail, title: 'E-mail', value: 'contato@barroseferraz.com.br', subtext: 'Resposta em horário comercial' },
+    { icon: MapPin, title: 'Endereço', value: 'Av. Paulista, 1000', subtext: 'São Paulo - SP' },
+    { icon: Clock, title: 'Disponibilidade', value: 'Atendimento agendado', subtext: 'Reuniões presenciais e online' }
   ];
 
   return (
@@ -15,8 +15,8 @@ export default function Contact() {
       <div className={styles.container}>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className={styles.header}>
           <p className={styles.badge}>Contato</p>
-          <h2 className={styles.title}>Converse com a equipe e entenda qual estrategia juridica faz mais sentido para o seu caso.</h2>
-          <p className={styles.description}>Se voce precisa de consultoria, contencioso ou uma segunda opiniao bem estruturada, nosso time responde com clareza e objetividade.</p>
+          <h2 className={styles.title}>Converse com a equipe e entenda qual estratégia jurídica faz mais sentido para o seu caso.</h2>
+          <p className={styles.description}>Se você precisa de consultoria, contencioso ou uma segunda opinião bem estruturada, nosso time responde com clareza e objetividade.</p>
         </motion.div>
 
         <div className={styles.contactGrid}>
@@ -39,7 +39,7 @@ export default function Contact() {
             <input type="text" placeholder="Seu nome" className={styles.input} required />
             <input type="email" placeholder="seu@email.com" className={styles.input} required />
             <input type="tel" placeholder="(11) 99999-9999" className={styles.input} required />
-            <textarea placeholder="Descreva brevemente a sua necessidade juridica." rows="5" className={styles.textarea} required></textarea>
+            <textarea placeholder="Descreva brevemente a sua necessidade jurídica." rows="5" className={styles.textarea} required></textarea>
             <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} type="submit" className={styles.submitButton}>Solicitar retorno</motion.button>
           </form>
         </motion.div>
@@ -47,4 +47,3 @@ export default function Contact() {
     </section>
   );
 }
-
