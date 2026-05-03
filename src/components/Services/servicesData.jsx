@@ -4,91 +4,91 @@ export const servicesData = [
   {
     id: 1,
     title: 'Direito Civil',
-    category: 'Patrimonio e contratos',
-    description: 'Atuacao em obrigacoes, responsabilidade civil, contratos e disputas patrimoniais.',
-    fullDescription: 'Conduzimos casos civeis com leitura estrategica do contexto, avaliacao de risco e comunicacao clara em cada etapa. A atuacao cobre prevencao, negociacao e contencioso para proteger direitos e reduzir desgaste operacional.',
+    category: 'Patrimônio e contratos',
+    description: 'Atuação em obrigações, responsabilidade civil, contratos e disputas patrimoniais.',
+    fullDescription: 'Conduzimos casos cíveis com leitura estratégica do contexto, avaliação de risco e comunicação clara em cada etapa. A atuação cobre prevenção, negociação e contencioso para proteger direitos e reduzir desgaste operacional.',
     icon: <Scale size={32} />,
-    benefits: ['Analise completa de contratos e documentos', 'Estruturacao de estrategia para negociacao ou litigio', 'Acompanhamento proximo da evolucao processual', 'Defesa tecnica com foco em resultado e previsibilidade'],
+    benefits: ['Análise completa de contratos e documentos', 'Estruturação de estratégia para negociação ou litígio', 'Acompanhamento próximo da evolução processual', 'Defesa técnica com foco em resultado e previsibilidade'],
     process: [
-      { title: 'Levantamento inicial', description: 'Entendemos fatos, documentos e impacto juridico do caso.' },
-      { title: 'Definicao de estrategia', description: 'Organizamos tese, provas e caminhos possiveis com clareza.' },
-      { title: 'Execucao', description: 'Conduzimos negociacao ou processo com acompanhamento continuo.' }
+      { title: 'Levantamento inicial', description: 'Entendemos fatos, documentos e o impacto jurídico do caso.' },
+      { title: 'Definição de estratégia', description: 'Organizamos tese, provas e caminhos possíveis com clareza.' },
+      { title: 'Execução', description: 'Conduzimos negociação ou processo com acompanhamento contínuo.' }
     ],
-    highlight: 'Atuacao pensada para equilibrar solidez tecnica, timing e menor friccao para o cliente.'
+    highlight: 'Atuação pensada para equilibrar solidez técnica, timing e menor fricção para o cliente.'
   },
   {
     id: 2,
     title: 'Direito Empresarial',
-    category: 'Operacoes e governanca',
-    description: 'Suporte juridico para empresas em contratos, societario, expansao e rotina corporativa.',
-    fullDescription: 'Assessoramos empresas em decisoes juridicas que impactam caixa, governanca e crescimento. A proposta combina visao preventiva e capacidade de reacao rapida quando o tema exige negociacao sensivel ou contencioso.',
+    category: 'Operações e governança',
+    description: 'Suporte jurídico para empresas em contratos, societário, expansão e rotina corporativa.',
+    fullDescription: 'Assessoramos empresas em decisões jurídicas que impactam caixa, governança e crescimento. A proposta combina visão preventiva e capacidade de reação rápida quando o tema exige negociação sensível ou contencioso.',
     icon: <Building2 size={32} />,
-    benefits: ['Revisao e elaboracao de contratos comerciais', 'Apoio em temas societarios e reorganizacao', 'Mitigacao de riscos operacionais e regulatorios', 'Atendimento consultivo com resposta objetiva'],
+    benefits: ['Revisão e elaboração de contratos comerciais', 'Apoio em temas societários e reorganização', 'Mitigação de riscos operacionais e regulatórios', 'Atendimento consultivo com resposta objetiva'],
     process: [
-      { title: 'Diagnostico operacional', description: 'Mapeamos estrutura, contratos e gargalos juridicos.' },
-      { title: 'Plano juridico', description: 'Priorizamos riscos e definimos a melhor linha de acao.' },
-      { title: 'Acompanhamento continuo', description: 'Executamos e ajustamos as medidas conforme a necessidade do negocio.' }
+      { title: 'Diagnóstico operacional', description: 'Mapeamos estrutura, contratos e gargalos jurídicos.' },
+      { title: 'Plano jurídico', description: 'Priorizamos riscos e definimos a melhor linha de ação.' },
+      { title: 'Acompanhamento contínuo', description: 'Executamos e ajustamos as medidas conforme a necessidade do negócio.' }
     ],
-    highlight: 'Ideal para empresas que buscam clareza juridica sem perder velocidade de decisao.'
+    highlight: 'Ideal para empresas que buscam clareza jurídica sem perder velocidade de decisão.'
   },
   {
     id: 3,
     title: 'Direito Trabalhista',
-    category: 'Relacoes laborais',
+    category: 'Relações laborais',
     description: 'Defesa e consultoria em demandas trabalhistas para empresas e executivos.',
-    fullDescription: 'Atuamos em conflitos trabalhistas com abordagem pragmatica, leitura de exposicao financeira e construcao de estrategia consistente. O trabalho pode ser preventivo, negocial ou contencioso, conforme o momento do cliente.',
+    fullDescription: 'Atuamos em conflitos trabalhistas com abordagem pragmática, leitura de exposição financeira e construção de estratégia consistente. O trabalho pode ser preventivo, negocial ou contencioso, conforme o momento do cliente.',
     icon: <Users size={32} />,
-    benefits: ['Defesa em reclamacoes trabalhistas', 'Apoio preventivo para rotinas e desligamentos', 'Negociacao de acordos com criterio tecnico', 'Reducao de risco e alinhamento documental'],
+    benefits: ['Defesa em reclamações trabalhistas', 'Apoio preventivo para rotinas e desligamentos', 'Negociação de acordos com critério técnico', 'Redução de risco e alinhamento documental'],
     process: [
-      { title: 'Analise de exposicao', description: 'Avaliamos documentos, historico e risco trabalhista envolvido.' },
-      { title: 'Tese de defesa', description: 'Estruturamos linha tecnica e estrategia negocial.' },
-      { title: 'Conducao do caso', description: 'Acompanhamos audiencias, prazos e oportunidades de composicao.' }
+      { title: 'Análise de exposição', description: 'Avaliamos documentos, histórico e o risco trabalhista envolvido.' },
+      { title: 'Tese de defesa', description: 'Estruturamos linha técnica e estratégia negocial.' },
+      { title: 'Condução do caso', description: 'Acompanhamos audiências, prazos e oportunidades de composição.' }
     ],
-    highlight: 'Combina firmeza tecnica com visao de impacto reputacional e financeiro.'
+    highlight: 'Combina firmeza técnica com visão de impacto reputacional e financeiro.'
   },
   {
     id: 4,
     title: 'Direito Administrativo',
-    category: 'Regulacao e licitacoes',
-    description: 'Atuacao em processos administrativos, contratos publicos e relacao com a administracao.',
-    fullDescription: 'Orientamos empresas e executivos em temas administrativos com foco em conformidade, defesa e sustentacao documental. A experiencia inclui licitacoes, sancoes, recursos e contratos com o poder publico.',
+    category: 'Regulação e licitações',
+    description: 'Atuação em processos administrativos, contratos públicos e relação com a administração.',
+    fullDescription: 'Orientamos empresas e executivos em temas administrativos com foco em conformidade, defesa e sustentação documental. A experiência inclui licitações, sanções, recursos e contratos com o poder público.',
     icon: <Shield size={32} />,
-    benefits: ['Defesa em processos administrativos', 'Apoio em licitacoes e contratos publicos', 'Leitura regulatoria aplicada ao negocio', 'Construcao de recursos e impugnacoes consistentes'],
+    benefits: ['Defesa em processos administrativos', 'Apoio em licitações e contratos públicos', 'Leitura regulatória aplicada ao negócio', 'Construção de recursos e impugnações consistentes'],
     process: [
-      { title: 'Leitura normativa', description: 'Avaliamos a regra aplicavel e os pontos sensiveis do caso.' },
-      { title: 'Estruturacao documental', description: 'Organizamos defesa, resposta ou recurso com base tecnica.' },
-      { title: 'Representacao', description: 'Conduzimos a interlocucao e o acompanhamento ate a decisao final.' }
+      { title: 'Leitura normativa', description: 'Avaliamos a regra aplicável e os pontos sensíveis do caso.' },
+      { title: 'Estruturação documental', description: 'Organizamos defesa, resposta ou recurso com base técnica.' },
+      { title: 'Representação', description: 'Conduzimos a interlocução e o acompanhamento até a decisão final.' }
     ],
-    highlight: 'Essencial para reduzir ruido institucional e proteger a operacao diante do setor publico.'
+    highlight: 'Essencial para reduzir ruído institucional e proteger a operação diante do setor público.'
   },
   {
     id: 5,
     title: 'Direito Penal Empresarial',
-    category: 'Defesa estrategica',
-    description: 'Atuacao em investigaçoes e processos com repercussao criminal e empresarial.',
-    fullDescription: 'Conduzimos defesas criminais com discricao, rigor tecnico e resposta rapida. Em materias penais empresariais, o trabalho considera prova, narrativa, risco reputacional e conexoes com a estrategia global do cliente.',
+    category: 'Defesa estratégica',
+    description: 'Atuação em investigações e processos com repercussão criminal e empresarial.',
+    fullDescription: 'Conduzimos defesas criminais com discrição, rigor técnico e resposta rápida. Em matérias penais empresariais, o trabalho considera prova, narrativa, risco reputacional e conexões com a estratégia global do cliente.',
     icon: <Gavel size={32} />,
-    benefits: ['Atuacao desde a fase investigatoria', 'Defesa em procedimentos e acoes penais', 'Leitura de risco reputacional e institucional', 'Coordenacao com outras frentes juridicas do caso'],
+    benefits: ['Atuação desde a fase investigatória', 'Defesa em procedimentos e ações penais', 'Leitura de risco reputacional e institucional', 'Coordenação com outras frentes jurídicas do caso'],
     process: [
-      { title: 'Analise de urgencia', description: 'Mapeamos fatos, risco imediato e medidas prioritarias.' },
-      { title: 'Construcao defensiva', description: 'Organizamos narrativa, provas e linha de defesa.' },
-      { title: 'Resposta coordenada', description: 'Atuamos de forma tecnica em cada etapa do procedimento.' }
+      { title: 'Análise de urgência', description: 'Mapeamos fatos, risco imediato e medidas prioritárias.' },
+      { title: 'Construção defensiva', description: 'Organizamos narrativa, provas e linha de defesa.' },
+      { title: 'Resposta coordenada', description: 'Atuamos de forma técnica em cada etapa do procedimento.' }
     ],
-    highlight: 'Em situacoes sensiveis, tempo de resposta e clareza estrategica fazem toda a diferenca.'
+    highlight: 'Em situações sensíveis, tempo de resposta e clareza estratégica fazem toda a diferença.'
   },
   {
     id: 6,
-    title: 'Consultoria Juridica',
-    category: 'Decisao e prevencao',
-    description: 'Suporte consultivo para quem precisa decidir com seguranca juridica e menos improviso.',
-    fullDescription: 'A consultoria juridica funciona como apoio direto para decisoes relevantes do dia a dia e movimentos estruturais. Organizamos cenarios, riscos e alternativas para que o cliente aja com mais seguranca e menos incerteza.',
+    title: 'Consultoria Jurídica',
+    category: 'Decisão e prevenção',
+    description: 'Suporte consultivo para quem precisa decidir com segurança jurídica e menos improviso.',
+    fullDescription: 'A consultoria jurídica funciona como apoio direto para decisões relevantes do dia a dia e movimentos estruturais. Organizamos cenários, riscos e alternativas para que o cliente aja com mais segurança e menos incerteza.',
     icon: <Briefcase size={32} />,
-    benefits: ['Analise juridica aplicada ao contexto do cliente', 'Recomendacoes objetivas e acionaveis', 'Prevencao de passivos e ruídos operacionais', 'Suporte continuado conforme a necessidade da demanda'],
+    benefits: ['Análise jurídica aplicada ao contexto do cliente', 'Recomendações objetivas e acionáveis', 'Prevenção de passivos e ruídos operacionais', 'Suporte continuado conforme a necessidade da demanda'],
     process: [
-      { title: 'Contexto', description: 'Entendemos negocio, objetivo e urgencia da decisao.' },
-      { title: 'Parecer estrategico', description: 'Apresentamos riscos, caminhos e recomendacao principal.' },
-      { title: 'Implementacao', description: 'Apoiamos a execucao juridica das medidas escolhidas.' }
+      { title: 'Contexto', description: 'Entendemos negócio, objetivo e urgência da decisão.' },
+      { title: 'Parecer estratégico', description: 'Apresentamos riscos, caminhos e recomendação principal.' },
+      { title: 'Implementação', description: 'Apoiamos a execução jurídica das medidas escolhidas.' }
     ],
-    highlight: 'Para clientes que preferem agir com lastro tecnico antes que o problema cresca.'
+    highlight: 'Para clientes que preferem agir com lastro técnico antes que o problema cresça.'
   }
 ];

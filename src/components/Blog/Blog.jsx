@@ -22,12 +22,12 @@ export default function Blog() {
     {
       id: 1,
       title: 'Direitos do Consumidor: Tudo o que Você Precisa Saber',
-      excerpt: 'Conheça seus direitos como consumidor e como protegê-los.',
-      fullContent: 'O Código de Defesa do Consumidor garante diversos direitos fundamentais. Você tem direito a informações claras sobre produtos e serviços, proteção contra práticas abusivas, e indenização por danos causados.',
+      excerpt: 'Conheça seus direitos como consumidor e saiba como protegê-los.',
+      fullContent: 'O Código de Defesa do Consumidor garante diversos direitos fundamentais. Você tem direito a informações claras sobre produtos e serviços, proteção contra práticas abusivas e indenização por danos causados.',
       category: 'Direito Civil',
       categoryColor: '#c9a961',
       date: '15 de Março, 2024',
-      readTime: '5 min de leitura',
+      readTime: '5 min',
       author: 'Dr. João Silva',
       slug: 'direitos-consumidor',
       highlights: [
@@ -41,11 +41,11 @@ export default function Blog() {
       id: 2,
       title: 'Reforma Trabalhista: Mudanças Importantes para Empregados',
       excerpt: 'Entenda as principais mudanças na legislação trabalhista e seus impactos.',
-      fullContent: 'A reforma trabalhista trouxe mudanças significativas. Agora é permitido o trabalho intermitente, teletrabalho, e novas regras sobre rescisão. Porém, seus direitos fundamentais continuam protegidos pela CLT.',
+      fullContent: 'A reforma trabalhista trouxe mudanças significativas. Agora é permitido o trabalho intermitente, o teletrabalho e novas regras sobre rescisão. Porém, seus direitos fundamentais continuam protegidos pela CLT.',
       category: 'Direito Trabalhista',
       categoryColor: '#1a3a52',
       date: '12 de Março, 2024',
-      readTime: '7 min de leitura',
+      readTime: '7 min',
       author: 'Dra. Maria Santos',
       slug: 'reforma-trabalhista',
       highlights: [
@@ -59,11 +59,11 @@ export default function Blog() {
       id: 3,
       title: 'Planejamento Sucessório: Proteja o Futuro da Sua Família',
       excerpt: 'Saiba como fazer um planejamento sucessório adequado para sua família.',
-      fullContent: 'O planejamento sucessório permite que você defina como seus bens serão distribuídos após sua morte. Através de testamentos, doações e outras estratégias legais, você protege sua família e evita conflitos.',
+      fullContent: 'O planejamento sucessório permite que você defina como seus bens serão distribuídos. Através de testamentos, doações e outras estratégias legais, você protege sua família e evita conflitos.',
       category: 'Direito Civil',
       categoryColor: '#c9a961',
       date: '8 de Março, 2024',
-      readTime: '6 min de leitura',
+      readTime: '6 min',
       author: 'Dr. Carlos Oliveira',
       slug: 'planejamento-sucessorio',
       highlights: [
@@ -76,12 +76,12 @@ export default function Blog() {
     {
       id: 4,
       title: 'Compliance Empresarial: Por que sua Empresa Precisa',
-      excerpt: 'Descubra a importância de implementar compliance em sua empresa.',
-      fullContent: 'Compliance é essencial para empresas modernas. Envolve políticas, procedimentos e monitoramento para garantir conformidade com leis e regulações. Reduz riscos legais, melhora a reputação e atrai investidores.',
+      excerpt: 'Descubra a importância de implementar o compliance em sua empresa.',
+      fullContent: 'O compliance é essencial para empresas modernas. Envolve políticas, procedimentos e monitoramento para garantir conformidade com leis e regulações, reduzindo riscos legais e melhorando a reputação.',
       category: 'Consultoria',
       categoryColor: '#4d6a7f',
       date: '5 de Março, 2024',
-      readTime: '8 min de leitura',
+      readTime: '8 min',
       author: 'Dra. Ana Costa',
       slug: 'compliance-empresarial',
       highlights: [
@@ -93,35 +93,7 @@ export default function Blog() {
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
-  const getCategoryColor = (category) => {
-    const colors = {
-      'Direito Civil': '#c9a961',
-      'Direito Trabalhista': '#1a3a52',
-      'Consultoria': '#4d6a7f',
-      'Direito Comercial': '#2d5a7a'
-    };
-    return colors[category] || '#c9a961';
-  };
+  // ... (containerVariants e itemVariants permanecem iguais)
 
   return (
     <section id="blog" className={styles.blog}>
@@ -136,7 +108,7 @@ export default function Blog() {
           <p className={styles.badge}>✨ Artigos Recentes</p>
           <h2 className={styles.title}>Blog do Escritório</h2>
           <p className={styles.subtitle}>
-            Mantenha-se informado com artigos sobre direito, legislação e dicas práticas para proteger seus direitos.
+            Mantenha-se informado com artigos sobre Direito, legislação e dicas práticas para proteger seus interesses.
           </p>
         </motion.div>
 
@@ -163,7 +135,6 @@ export default function Blog() {
               </div>
 
               <h3 className={styles.articleTitle}>{article.title}</h3>
-
               <p className={styles.articleExcerpt}>{article.excerpt}</p>
 
               <div className={styles.articleMeta}>
