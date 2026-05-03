@@ -8,7 +8,15 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className={styles.content}>
+        {/* ... (partes anteriores do content permanecem iguais) */}
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.8 }} 
+          viewport={{ once: true }} 
+          className={styles.content}
+        >
           <div className={styles.section}>
             <h3 className={styles.sectionTitle}>Áreas</h3>
             <ul className={styles.links}>
@@ -50,8 +58,24 @@ export default function Footer() {
           </div>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.2 }} viewport={{ once: true }} className={styles.bottom}>
-          <p>&copy; {currentYear} Barros & Ferraz Advocacia Estratégica. Todos os direitos reservados a.</p>
+        <motion.div 
+          initial={{ opacity: 0 }} 
+          whileInView={{ opacity: 1 }} 
+          transition={{ duration: 0.8, delay: 0.2 }} 
+          viewport={{ once: true }} 
+          className={styles.bottom}
+        >
+          <p>
+            &copy; {currentYear} Barros & Ferraz Advocacia Estratégica. Todos os direitos reservados a{' '}
+            <a 
+              href="https://kodantech-cjcz.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={styles.devLink}
+            >
+              KodanTech
+            </a>
+          </p>
         </motion.div>
       </div>
     </footer>

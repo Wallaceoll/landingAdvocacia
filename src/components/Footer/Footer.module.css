@@ -112,3 +112,16 @@
   color: #e8e4df;
   margin: 0;
 }
+
+.devLink {
+  color: #c9a961;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.devLink:hover {
+  color: #f5f1ed;
+  border-bottom-color: #f5f1ed;
+}
